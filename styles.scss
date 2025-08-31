@@ -1,11 +1,11 @@
 // =========================
 // Variables
 // =========================
-$color-primary: #333;
-$color-secondary: #999;
+$color-primary: #c2b6f1;
+$color-secondary: #547c93;
 $color-white: #fff;
 
-$font-main: "Lexend", Arial, Helvetica, sans-serif;
+$font-main: "Roboto Mono", Arial, Helvetica, sans-serif;
 
 $bp-tablet: 820px;
 $bp-mobile: 480px;
@@ -78,8 +78,7 @@ header {
   @include box;
   padding: 60px 0;
   text-align: center;
-  background: url("../IMG/banner.jpg") no-repeat center 80% / cover;
-  color: $color-white;
+  background: url(../Ecommerce/IMG/banner.jpg) no-repeat center 80% / cover;
 
   h2 {
     @include heading(30px);
