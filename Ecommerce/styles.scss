@@ -1,0 +1,249 @@
+// =========================
+// Variables
+// =========================
+$color-primary: #333;
+$color-secondary: #999;
+$color-white: #fff;
+
+$font-main: "Lexend", Arial, Helvetica, sans-serif;
+
+$bp-tablet: 820px;
+$bp-mobile: 480px;
+
+// =========================
+// Mixins
+// =========================
+@mixin flex($justify: center, $align: center) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin responsive-img($width) {
+  width: $width;
+  height: auto;
+}
+
+@mixin heading($size, $weight: 600) {
+  font-size: $size;
+  font-weight: $weight;
+}
+
+@mixin box {
+  box-sizing: border-box;
+}
+
+// =========================
+// Global Styles
+// =========================
+body {
+  width: 100%;
+  font-size: 15px;
+  font-weight: 300;
+  color: $color-secondary;
+  font-family: $font-main;
+  margin: 0;
+}
+
+img {
+  @include responsive-img(100px);
+}
+
+// =========================
+// Header
+// =========================
+header {
+  width: 100%;
+  @include box;
+  padding: 20px 50px;
+  background-color: $color-primary;
+  @include flex(space-between, center);
+
+  i {
+    @include responsive-img(35px);
+    cursor: pointer;
+    display: inline-block;
+
+    img {
+      @include responsive-img(100%);
+    }
+  }
+}
+
+// =========================
+// Banner
+// =========================
+.banner {
+  width: 100%;
+  @include box;
+  padding: 60px 0;
+  text-align: center;
+  background: url("../IMG/banner.jpg") no-repeat center 80% / cover;
+  color: $color-white;
+
+  h2 {
+    @include heading(30px);
+    margin: 10px;
+  }
+
+  p {
+    font-size: 25px;
+    opacity: 0.7;
+  }
+}
+
+// =========================
+// Products
+// =========================
+.products {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  @include box;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+  article {
+    cursor: pointer;
+    text-align: center;
+  }
+
+  img {
+    @include responsive-img(200px);
+    margin-bottom: 15px;
+  }
+
+  h3 {
+    font-weight: 500;
+    font-size: 17px;
+    margin-bottom: 5px;
+  }
+
+  p {
+    font-weight: 300;
+    font-size: 15px;
+  }
+}
+
+// =========================
+// Cart
+// =========================
+.cart {
+  width: 500px;
+  background-color: $color-white;
+  padding: 25px;
+  @include box;
+  height: 100%;
+  position: fixed;
+  right: -100%;
+  top: 100px;
+  box-shadow: -19px -1px 22px -15px rgba(0, 0, 0, 0.30);
+
+  h2 {
+    width: 100%;
+    text-align: center;
+    @include heading(20px);
+    padding: 25px 0;
+  }
+
+  div {
+    border-bottom: 1px solid $color-primary;
+    @include flex(space-between, center);
+    padding: 15px;
+    @include box;
+
+    img {
+      @include responsive-img(60px);
+    }
+
+    p:nth-child(3) {
+      font-weight: 500;
+    }
+
+    i {
+      @include responsive-img(60px);
+      cursor: pointer;
+    }
+
+    .delete-icon {
+      @include responsive-img(100%);
+    }
+  }
+}
+
+// =========================
+// Media Queries
+// =========================
+@media (max-width: $bp-tablet) {
+  header {
+    padding: 15px;
+
+    > img {
+      @include responsive-img(60px);
+    }
+
+    i {
+      @include responsive-img(30px);
+    }
+  }
+
+  .products {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+
+    img {
+      @include responsive-img(150px);
+    }
+  }
+
+  .cart {
+    width: 400px;
+    top: 80px;
+  }
+}
+
+@media (max-width: $bp-mobile) {
+  .banner {
+    padding: 30px 0;
+
+    h2 {
+      font-size: 18px;
+    }
+
+    p {
+      font-size: 16px;
+    }
+  }
+
+  .products {
+    grid-template-columns: 1fr;
+    padding: 10px;
+
+    img {
+      width: 100%;
+      max-width: 200px;
+      margin-bottom: 10px;
+    }
+  }
+
+  .cart {
+    width: 100%;
+    box-shadow: none;
+
+    h2 {
+      padding: 15px 0;
+    }
+
+    div {
+      flex-direction: column;
+      align-items: center;
+
+      img {
+        @include responsive-img(100px);
+      }
+
+      p {
+        margin: 0;
+      }
+    }
+  }
+}
