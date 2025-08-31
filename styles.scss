@@ -79,7 +79,6 @@ header {
   padding: 60px 0;
   text-align: center;
   background: url(../Ecommerce/IMG/banner.jpg) no-repeat center 80% / cover;
-  color: $color-white;
 
   h2 {
     @include heading(30px);
