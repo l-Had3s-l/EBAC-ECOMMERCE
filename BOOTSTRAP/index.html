@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog Gamer - Inicio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="#">
+            <img src="assets/logo-blog.png" alt="Logo Blog Gamer" class="me-2" style="height: 30px;">Blog Gamer
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="foro.html">Foro</a></li>
+            </ul>
+        </div>
+  </div>
+</nav>
+
+<main class="flex-fill">
+<!-- Carrusel -->
+<div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="assets/lanzamientos.png" class="d-block w-100" alt="Juego 1">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Lanzamientos del mes</h5>
+                    <p>Descubre los títulos más esperados.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="assets/resena.png" class="d-block w-100" alt="Juego 2">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Reseñas</h5>
+                <p>Opiniones honestas de la comunidad gamer.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="assets/analisis.png" class="d-block w-100" alt="Juego 2">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Análisis</h5>
+                    <p>Estudio de las caracteristicas que hacen bueno o malo un juego.</p>
+            </div>
+        </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+  </button>
+</div>
+
+<!-- Sección de noticias destacadas -->
+<section class="container my-5">
+  <div class="row g-4">
+    <div class="col-md-4 col-lg-2">
+        <a href="#" class="news-card">
+            <img src="assets/gears.jpg" alt="Noticia 1">
+            <div class="news-text">Lanzamiento sorpresa</div>
+        </a>
+    </div>
+    <div class="col-md-4 col-lg-2">
+        <a href="#" class="news-card">
+            <img src="assets/top10.jfif" alt="Noticia 2">
+            <div class="news-text">Top 10 del mes en steam</div>
+        </a>
+    </div>
+    <div class="col-md-4 col-lg-2">
+        <a href="#" class="news-card">
+            <img src="assets/helldivers.png" alt="Noticia 3">
+            <div class="news-text">Análisis profundo a Helldivers 2</div>
+        </a>
+    </div>
+    <div class="col-md-4 col-lg-2">
+        <a href="#" class="news-card">
+            <img src="assets/entrevista.jpg" alt="Noticia 4">
+            <div class="news-text">Entrevista exclusiva</div>
+        </a>
+    </div>
+    <div class="col-md-4 col-lg-2">
+        <a href="#" class="news-card">
+            <img src="assets/gamergy.png" alt="Noticia 5">
+            <div class="news-text">Evento: Gamergy 2025</div>
+        </a>
+    </div>
+    <div class="col-md-4 col-lg-2">
+        <a href="#" class="news-card">
+            <img src="assets/esports.png" alt="Noticia 5">
+            <div class="news-text">Noticias E-sports</div>
+        </a>
+    </div>
+  </div>
+</section>
+
+<!-- Acordeón -->
+<section class="container my-5">
+  <h2 class="text-center mb-4">Preguntas Frecuentes</h2>
+    <div class="accordion" id="faqAccordion">
+        <div class="accordion-item">
+        <h2 class="accordion-header">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+            ¿Cada cuánto se actualiza el blog?
+            </button>
+        </h2>
+        <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+            Publicamos contenido nuevo cada semana, incluyendo reseñas, noticias y recomendaciones.
+            </div>
+        </div>
+        </div>
+        <div class="accordion-item">
+        <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+            ¿Puedo participar en el foro?
+            </button>
+        </h2>
+        <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+            Sí, solo necesitas registrarte para comenzar a compartir tus recomendaciones.
+            </div>
+        </div>
+        </div>
+    </div>
+</section>
+</main>
+
+<!-- Footer -->
+<footer class="bg-dark text-white text-center py-4">
+  <div class="container">
+    <p class="mb-2">&copy; 2025 Blog Gamer</p>
+    
+    <!-- Redes Sociales -->
+    <div class="social-icons">
+        <a href="#" class="text-white me-3" target="_blank" aria-label="Facebook">
+            <i class="bi bi-facebook"></i>
+        </a>
+        <a href="#" class="text-white me-3" target="_blank" aria-label="Twitter">
+            <i class="bi bi-twitter"></i>
+        </a>
+        <a href="#" class="text-white me-3" target="_blank" aria-label="Instagram">
+            <i class="bi bi-instagram"></i>
+        </a>
+        <a href="#" class="text-white" target="_blank" aria-label="YouTube">
+            <i class="bi bi-youtube"></i>
+        </a>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
